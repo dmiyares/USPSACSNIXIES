@@ -1,0 +1,36 @@
+@AcsFileHeaderId int,
+@ClientId int,
+@RecordType varchar(1),													Record Type (Header)     
+@FileVersion varchar(2),                        File Version             
+@CustomerID int,                                Customer ID              
+@CreateDate date,                               Create Date (CCYYMMDD)   
+@ShipmentNumber bigint,                         Shipment Number          
+@TotalAcsRecordCount int,                       Total ACS Record Count   
+@TotalCoaCount int,                             Total COA Count          
+@TotalNixieCount int,                           Total Nixie Count        
+@TrdRecordCount int,	                          TRD Record Count         
+@TrdAcsFeeAmount decimal(9,2),                  TRD ACS Fee Amount       
+@TrdCoaCount int,                               TRD COA Count            
+@TrdCoaAcsFeeAmount decimal(9,2),               TRD COA ACS Fee Amount   
+@TrdNixieCount int,                             TRD Nixie Count          
+@TrdNixieAcsFeeAmount decimal(9,2),             TRD Nixie ACS Fee Amount 
+@OcdRecordCount int,                            OCD Record Count         
+@OcdAcsFeeAmount decimal(9,2),                  OCD ACS Fee Amount       
+@OcdCoaCount int,                               OCD COA Count            
+@OcdCoaAcsFeeAmount decimal(9,2),               OCD COA ACS Fee Amount   
+@OcdNixieCount int,                             OCD Nixie Count          
+@OcdNixieAcsFeeAmount decimal(9,2),             OCD Nixie ACS Fee Amount 
+@FsRecordCount int,                             FS Record Count          
+@FsAcsFeeAmount decimal(9,2),                   FS ACS Fee Amount        
+@FsCoaCount int,                                FS COA Count             
+@FsCoaAcsFeeAmount decimal(9,2),                FS COA ACS Fee Amount    
+@FsNixieCount int,                              FS Nixie Count           
+@FsNixieAcsFeeAmount decimal(9,2),              FS Nixie ACS Fee Amount  
+@ImpbRecordCount int,                           IMpb Record Count        
+@ImpbAcsFeeAmount decimal(9,2),                 IMpb ACS Fee Amount      
+@ImpbCoaCount int,                              IMpb COA Count           
+@ImpbCoaAcsFeeAmount decimal(9,2),              IMpb COA ACS Fee Amount  
+@ImpbNixieCount int,                            IMpb Nixie Count         
+@ImpbNixieAcsFeeAmount decimal(9,2),            IMpb Nixie ACS Fee Amount
+@Filler varchar(405),                           Filler                   
+@EndMarker varchar(1),                          End Marker               

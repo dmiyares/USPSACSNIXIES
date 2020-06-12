@@ -1,5 +1,9 @@
 /vendor/*
+*.ZIP
 *.zip
 *.csv
 config.php
+/SAMPLEFILES/*
+/downloads/*
+/USPSdocs/*
 

@@ -1,0 +1,27 @@
+<?php
+
+// ----------------------------------------------------------------------------
+//
+//  File: /web/USPSACSNIXIES/config.php
+//  Creation Date: 04/24/20 03:21:15 PM
+//  Purpose: config file for all the passwords and shit to get into USPS.
+//						make sure that this file is in gitignore!
+//
+// ----------------------------------------------------------------------------
+ 
+
+		$ZipPasswords=array('FILE IDENTIFIER' => 'password to open ',
+												'FILE IDENTIFIER' => 'password to open ');
+		
+		$UserCreds=array('login'=>'account email at usps EPF',
+										 'pword'=>'password',
+										 'logonkey'=>'usps key');
+						
+
+
+	  
+		### DATABASE 
+				 DEFINE ("DATABASE_NAME","YOUR DATABASE NAME");
+				 DEFINE ("DATABASE_USER","YOUR DATABASE USER");
+				 DEFINE ("DATABASE_PASSWORD","YOUR DATABASE PASS");
+				 DEFINE ("DATABASE_HOST","YOUR DATABASE HOST");  // MOST OF THE TIME THIS IS localhost
