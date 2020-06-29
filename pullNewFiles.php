@@ -14,7 +14,7 @@
 		
 			$DBlink=connect_to_database();
 			
-			$sql="select fileid,filename from fileList where downloaded='N' order by fulfilled desc limit 3";
+			$sql="select fileid,filename from fileList where downloaded='N' order by fulfilled desc limit 50000";
 		
 			$result= mysqli_query($DBlink,$sql)  or die("\n\n*** CANNOT execute sql\n------------------------\n".$sql."\n-----------------\n\n");
 		
@@ -39,6 +39,10 @@
 		
 		$downloadResult=json_decode(CurlIt("download/epf","POST",$data,$fileName),true);
 
+
+		$sqlUpdate="update fileList set downloaded='Y' where fileid = ".$fileID;
+		
+		put_into_db($sqlUpdate);
  
  		}
 

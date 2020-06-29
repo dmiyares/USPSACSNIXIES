@@ -1,11 +1,9 @@
 <?php
-$file = fopen("downloads/TESTFILE.116","r");
+$file = fopen("downloads/tempq/P20020720.327","r");
 
 while(! feof($file))
   {
   $LineInFile=fgets($file);
-
-
 
 /**
 *  TEST FOR HEADER
@@ -15,19 +13,11 @@ while(! feof($file))
 
 
  				if($RecordType=="H"){
-					
 					processHeader($LineInFile);	
-					
 				}
 					 else {
-					 	
-					 	
 					 processData($LineInFile);
-					 	
-					 	
 					}
- 
-
   }
 
 fclose($file);
@@ -73,8 +63,12 @@ function processHeader($LineInFile){
     $Header_ImpbNixieAcsFeeAmount  = substr($LineInFile, 283,11);
     $Header_Filler                 = substr($LineInFile, 294,405); 
     $Header_EndMarker              = substr($LineInFile, 699,1);
+   
+   
+insert into (fileID,RecordType, FileVersion, CustomerID, CreateDate, ShipmentNumber, TotalAcsRecordCount, TotalCoaCount, TotalNixieCount, TrdRecordCount, TrdAcsFeeAmount, TrdCoaCount, TrdCoaAcsFeeAmount, TrdNixieCount, TrdNixieAcsFeeAmount, OcdRecordCount, OcdAcsFeeAmount, OcdCoaCount, OcdCoaAcsFeeAmount, OcdNixieCount, OcdNixieAcsFeeAmount, FsRecordCount, FsAcsFeeAmount, FsCoaCount, FsCoaAcsFeeAmount, FsNixieCount, FsNixieAcsFeeAmount, ImpbRecordCount, ImpbAcsFeeAmount, ImpbCoaCount, ImpbCoaAcsFeeAmount, ImpbNixieCount, ImpbNixieAcsFeeAmount, Filler, EndMarker) values ('.$FileID.','.$Header_RecordType.', '.$Header_FileVersion.', '.$Header_CustomerID.', '.$Header_CreateDate.', '.$Header_ShipmentNumber.', '.$Header_TotalAcsRecordCount.', '.$Header_TotalCoaCount.', '.$Header_TotalNixieCount.', '.$Header_TrdRecordCount.', '.$Header_TrdAcsFeeAmount.', '.$Header_TrdCoaCount.', '.$Header_TrdCoaAcsFeeAmount.', '.$Header_TrdNixieCount.', '.$Header_TrdNixieAcsFeeAmount.', '.$Header_OcdRecordCount.', '.$Header_OcdAcsFeeAmount.', '.$Header_OcdCoaCount.', '.$Header_OcdCoaAcsFeeAmount.', '.$Header_OcdNixieCount.', '.$Header_OcdNixieAcsFeeAmount.', '.$Header_FsRecordCount.', '.$Header_FsAcsFeeAmount.', '.$Header_FsCoaCount.', '.$Header_FsCoaAcsFeeAmount.', '.$Header_FsNixieCount.', '.$Header_FsNixieAcsFeeAmount.', '.$Header_ImpbRecordCount.', '.$Header_ImpbAcsFeeAmount.', '.$Header_ImpbCoaCount.', '.$Header_ImpbCoaAcsFeeAmount.', '.$Header_ImpbNixieCount.', '.$Header_ImpbNixieAcsFeeAmount.', '.$Header_Filler.', '.$Header_EndMarker.');   
 
 /*
+ 
 print("Header_RecordType						   = ".$Header_RecordType						  ."\n");
 print("Header_FileVersion						 = ".$Header_FileVersion						."\n");
 print("Header_CustomerID              = ".$Header_CustomerID             ."\n");
@@ -110,7 +104,7 @@ print("Header_ImpbNixieAcsFeeAmount   = ".$Header_ImpbNixieAcsFeeAmount  ."\n");
 print("Header_Filler                  = ".$Header_Filler                 ."\n");
 print("Header_EndMarker               = ".$Header_EndMarker              ."\n");
 
-*/				
+ 		*/	
 	 
 }
 
